@@ -34,4 +34,5 @@ Este proyecto utiliza las siguientes tecnologías:
 - **JavaScript**: Funcionalidad interactiva para la aplicación.
 - **Bootstrap**: Framework para una interfaz responsive y componentes prediseñados.
 - **PHP**: Lenguaje de programación del lado del servidor para manejar las peticiones y la lógica de la aplicación.
+- **MySQL**: Sistema de gestión de bases de datos para almacenar los datos de usuarios, productos y pedidos.
 
