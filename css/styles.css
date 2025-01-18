@@ -1,0 +1,504 @@
+/* Fondo del body */
+body {
+    background-color: #C5B69C !important; /* Beige suave */
+}
+
+/* Separación entre las secciones */
+.titulos-secciones {
+    margin-bottom: 2em !important; /* Aumento de la separación entre las secciones */
+    margin-top:2em !important;
+}
+
+.titulo-pedidosHoy{
+    margin-top: 2em !important;
+}
+
+/* Subrayado sencillo para los títulos */
+h2 {
+    font-family: 'Playfair Display', serif; /* Fuente elegante */
+    font-size: 2rem; /* Ajusta el tamaño de la fuente */
+    font-weight: 600; /* Peso de la fuente */
+    color: #333; /* Color oscuro para contrastar */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    line-height: 1.4; /* Mejora la legibilidad */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    text-align: center; /* Centra el texto */
+    position: relative; /* Para el subrayado */
+}
+
+/* Subrayado fijo */
+h2::after {
+    content: ""; /* Contenido vacío para crear la línea */
+    position: absolute; 
+    bottom: -5px; /* Ubica la línea debajo del texto */
+    left: 0;
+    width: 100%; /* Subrayado con el 100% del ancho del título */
+    height: 3px; /* Grosor de la línea */
+    background-color: black; /* Color de la línea */
+}
+
+
+
+
+/* Estilos generales del navbar */
+.navbar {
+    padding: 0.5rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4E4B46; /* Gris oscuro para contrastar con el fondo claro */
+}
+
+/* Estilos para el logo */
+.navbar-logo {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+    border: 2px solid #000000;
+    transition: transform 0.3s ease;
+    margin-left: 30px;
+}
+
+/* Aumentar el tamaño del logo al pasar el mouse */
+.navbar-brand:hover .navbar-logo {
+    transform: scale(1.05);
+}
+
+/* Estilos para las opciones del navbar */
+.navbar-nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Cambiar las opciones de la barra de navegación */
+.nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+    color: #D1D1D1; /* Gris claro para contrastar con el fondo oscuro */
+}
+
+.nav-link:hover {
+    color: #fff; /* Blanco para destacar al hacer hover */
+    background-color: rgba(255, 255, 255, 0.1)!important;
+}
+
+/* Estilos para los items del navbar */
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos del dropdown */
+.dropdown-menu {
+    position: absolute;
+    z-index: 1050;
+    background-color: #333; /* Gris muy oscuro para el dropdown */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+}
+
+.dropdown-item {
+    padding: 0.7rem 1.5rem;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+    color: #D1D1D1 !important;
+    background-color: transparent;
+}
+
+.dropdown-item:hover {
+    background-color:  rgba(255, 255, 255, 0.1)!important; /* Quita el fondo predeterminado */
+    color: #D1D1D1 !important; /* Mantiene el color de texto original */
+}
+
+/* Estilos específicos para el nombre de usuario y saldo */
+.nombre-navbar, .dinero-navbar {
+    font-size: 1rem!important;
+    color: #C5B69C!important; /* Color específico */
+    font-weight: 500!important;
+    margin-left: 10px!important;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 991px) {
+    .navbar-logo {
+        height: 35px;
+        width: 35px;
+    }
+
+    .nav-link {
+        padding: 0.7rem 1rem;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* Estilos de las tarjetas */
+.product-card-container {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.product-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #FFF; /* Fondo blanco para las tarjetas */
+    transition: all 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-details {
+    padding: 15px;
+}
+
+.product-checkbox {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.product-checkbox-input {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 3px solid #FF6347;
+    background-color: transparent;
+    transition: all 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.6);
+}
+
+/* Efectos al seleccionar el checkbox */
+.product-checkbox-input:checked {
+    background-color: #FF6347;
+    border-color: #FF4500;
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.8);
+    transform: scale(1.2);
+}
+
+.product-checkbox-input:hover {
+    background-color: rgba(255, 99, 71, 0.2);
+    border-color: #FF4500;
+    box-shadow: 0 0 15px rgba(255, 99, 71, 0.8);
+    transform: scale(1.1);
+}
+
+.product-checkbox-input:checked {
+    animation: pulse 0.5s ease-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.product-card.selected {
+    background-color: #FFFAF0;
+    border: 3px solid #FF6347;
+}
+
+.product-card.selected .product-checkbox-input {
+    background-color: #FF6347;
+    border-color: #FF4500;
+}
+
+/* Estilos para el perfil de usuario */
+
+/* Estilos para el espaciado de secciones */
+.profile-section {
+    margin: 4rem auto;
+    max-width: 800px;
+    padding: 0 1rem;
+}
+
+.no-content-message {
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    color: #666;
+}
+
+/* Centrado de las cards */
+.usuario-card-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.favorite-product-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+}
+
+.favorite-product-card {
+    width: 18rem;
+    margin: 0 auto;
+}
+
+/* Títulos de sección */
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #333;
+}
+
+/* Ajustes para las listas */
+.list-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.usuario-card {
+    display: grid;
+    grid-template-columns: minmax(150px, 20%) 1fr;
+    gap: 2rem;
+    background: linear-gradient(145deg, #ffffff, #f6f6f6);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    max-width: 800px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.usuario-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.usuario-titulo {
+    grid-column: 1 / -1;
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.usuario-avatar {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.usuario-avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.usuario-avatar-img:hover {
+    transform: scale(1.05);
+}
+
+.usuario-info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.usuario-info p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 0;
+    padding: 0.8rem 1.2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease;
+}
+
+.usuario-info p:hover {
+    transform: translateX(5px);
+}
+
+.usuario-info p strong {
+    color: #333;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    min-width: 100px;
+    display: inline-block;
+}
+
+/* Avatar change section */
+.usuario-info h3 {
+    color: #333;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #eee;
+}
+
+.avatar-form {
+    margin-top: 1rem;
+}
+
+.avatar-change-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.favorite-product-card {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #FFF; /* Fondo blanco para las tarjetas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.favorite-product-card:hover {
+    transform: translateY(-5px); /* Desplazamiento hacia arriba */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12); /* Sombra más pronunciada */
+}
+
+/* Botones */
+.btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.2);
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+}
+
+
+/*LOGO EN EL LOGIN*/
+
+
+.logo-login {
+    display: block; /* Centrar la imagen horizontalmente */
+    margin: 0 auto 20px; /* Centrarla y añadir margen inferior */
+    width: 120px; /* Ajusta el tamaño del logo */
+    height: 120px; /* Mantén la forma cuadrada para hacerlo redondo */
+    border-radius: 50%; /* Hace la imagen redonda */
+    object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Opcional, añade sombra para darle un toque elegante */
+    margin-top: 10px;
+}
+
+
+/*BOTONES PEDIDOS*/
+
+.fa-spin {
+    animation: fa-spin 1s infinite linear;
+}
+
+@keyframes fa-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Estilo para botones deshabilitados */
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/*IMAGEN AVATAR EN EL CRUD DE PEDIDOS*/
+
+.usuario-avatar-pedidos {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.usuario-avatar-img-pedidos {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+
