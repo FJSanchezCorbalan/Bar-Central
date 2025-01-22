@@ -2,6 +2,11 @@
 
 **Bar-Central** es una aplicación web diseñada para facilitar la realización de pedidos de productos de comida en un bar, a través de una interfaz sencilla y eficiente. Los usuarios pueden realizar pedidos directamente desde la aplicación o enviarlos mediante WhatsApp. Además, cuenta con funcionalidades para que los empleados del bar gestionen los pedidos y los usuarios manejen su perfil y su saldo en la cartera.
 
+# Acceso EN VIVO
+
+Puedes acceder a la aplicación en el siguiente enlace:
+https://telosabes.com/fernando/central2/
+
 ## Características
 
 ### 1. **Pedidos**
